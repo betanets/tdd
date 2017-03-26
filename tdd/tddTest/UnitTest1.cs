@@ -158,7 +158,7 @@ namespace tddTest
             Companion companion = new Companion();
             ExchRateMaker erm = new ExchRateMaker();
             double curErm = erm.getCurExchRateEUR();
-            Assert.AreEqual(">>> Курс доллара: " + curErm, companion.getWords("Покажи курс евро"));
+            Assert.AreEqual(">>> Курс евро: " + curErm, companion.getWords("Покажи курс евро"));
         }
     }
 }
