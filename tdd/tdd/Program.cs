@@ -10,7 +10,11 @@ namespace tdd
     {
         static void Main(string[] args)
         {
+            Companion companion = new Companion();
+            string words = Console.ReadLine();
+            Console.WriteLine(companion.getWords(words));
 
+            Console.ReadLine();
         }
     }
 }
