@@ -13,5 +13,12 @@ namespace tddTest
             Companion companion = new Companion();
             Assert.AreEqual(">>> Привет!", companion.getWords("Привет"));
         }
+
+        [TestMethod]
+        public void SayWhatAreYouDoing()
+        {
+            Companion companion = new Companion();
+            Assert.AreNotEqual(">>> Привет!", companion.getWords("Что ты умеешь делать?"));
+        }
     }
 }
