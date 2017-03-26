@@ -51,5 +51,16 @@ namespace tddTest
             int temperature = wm.getCurTemperatureByCityID(1880252);
             Assert.IsTrue(temperature > 15 && temperature < 50 ? true : false);
         }
+
+        [TestMethod]
+        public void WeatherMakerTestBarnaulNskSydney()
+        {
+            WeatherMaker wm = new WeatherMaker();
+            int temperatureBarnaul = wm.getCurTemperatureByCityID(1510853);
+            int temperatureNsk = wm.getCurTemperatureByCityID(1496747);
+            int temperatureSydney = wm.getCurTemperatureByCityID(2147714);
+
+            Assert.IsTrue( (temperatureBarnaul == temperatureNsk) && (temperatureNsk == temperatureSydney) ? false : true);
+        }
     }
 }
