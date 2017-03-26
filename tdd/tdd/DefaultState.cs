@@ -38,7 +38,7 @@ namespace tdd
             else if (words == "Покажи курс евро")
             {
                 ExchRateMaker erm = new ExchRateMaker();
-                return replySymbols + "Курс евро: ";
+                return replySymbols + "Курс евро: " + erm.getCurExchRateEUR();
             }
             return replySymbols + "Привет!";
         }
