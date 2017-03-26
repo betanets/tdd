@@ -128,5 +128,12 @@ namespace tddTest
             Assert.AreEqual(">>> Пожалуйста!", companion.getWords("Спасибо"));
             Assert.AreEqual(">>> Привет!", companion.getWords("Привет"));
         }
+
+        [TestMethod]
+        public void SayCurrentExchRate()
+        {
+            Companion companion = new Companion();
+            Assert.IsTrue((companion.getWords("Покажи курс доллара")).Contains(">>> Курс доллара: "));
+        }
     }
 }
