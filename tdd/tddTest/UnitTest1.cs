@@ -78,5 +78,15 @@ namespace tddTest
             double temperatureBarnaul = wm.getCurTemperatureByCityID(1510853);
             Assert.AreEqual(">>> Сейчас на улице: " + temperatureBarnaul, companion.getWords("Покажи погоду"));
         }
+
+
+        [TestMethod]
+        public void SayCurrentWeatherInNsk()
+        {
+            Companion companion = new Companion();
+            WeatherMaker wm = new WeatherMaker();
+            double temperatureNsk = wm.getCurTemperatureByCityID(1496747);
+            Assert.AreEqual(">>> Сейчас на улице: " + temperatureNsk, companion.getWords("Покажи погоду в Новосибирске"));
+        }
     }
 }
