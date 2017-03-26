@@ -144,5 +144,12 @@ namespace tddTest
             double curErm = erm.getCurExchRate();
             Assert.AreEqual(">>> Курс доллара: " + curErm, companion.getWords("Покажи курс доллара"));
         }
+
+        [TestMethod]
+        public void SayCurrentExchRateEUR()
+        {
+            Companion companion = new Companion();
+            Assert.IsTrue((companion.getWords("Покажи курс евро")).Contains(">>> Курс евро: "));
+        }
     }
 }
