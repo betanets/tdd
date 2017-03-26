@@ -20,6 +20,11 @@ namespace tdd
                 WeatherMaker wm = new WeatherMaker();
                 return replySymbols + "Сейчас на улице: " + wm.getCurTemperatureByCityID(1510853);
             }
+            else if(words == "Покажи погоду в Новосибирске")
+            {
+                WeatherMaker wm = new WeatherMaker();
+                return replySymbols + "Сейчас на улице: " + wm.getCurTemperatureByCityID(1496747);
+            }
             return replySymbols + "Привет!";
         }
     }
