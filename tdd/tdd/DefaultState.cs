@@ -30,6 +30,10 @@ namespace tdd
                 companion.State = new WeatherIDState();
                 return replySymbols + "Скажешь ID города?";
             }
+            else if(words == "Покажи курс доллара")
+            {
+                return replySymbols + "Курс доллара: ";
+            }
             return replySymbols + "Привет!";
         }
     }
