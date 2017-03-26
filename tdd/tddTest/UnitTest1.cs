@@ -32,7 +32,7 @@ namespace tddTest
         public void WeatherMakerTest()
         {
             WeatherMaker wm = new WeatherMaker();
-            int temperature = wm.getCurTemperatureByCityID(1510853);
+            double temperature = wm.getCurTemperatureByCityID(1510853);
             Assert.IsTrue(temperature > -40 && temperature < 40 ? true : false);
         }
 
@@ -40,7 +40,7 @@ namespace tddTest
         public void WeatherMakerTestAntarctica()
         {
             WeatherMaker wm = new WeatherMaker();
-            int temperature = wm.getCurTemperatureByCityID(6255152);
+            double temperature = wm.getCurTemperatureByCityID(6255152);
             Assert.IsTrue(temperature > -60 && temperature < -10 ? true : false);
         }
 
@@ -48,7 +48,7 @@ namespace tddTest
         public void WeatherMakerTestSingapore()
         {
             WeatherMaker wm = new WeatherMaker();
-            int temperature = wm.getCurTemperatureByCityID(1880252);
+            double temperature = wm.getCurTemperatureByCityID(1880252);
             Assert.IsTrue(temperature > 15 && temperature < 50 ? true : false);
         }
 
@@ -56,9 +56,9 @@ namespace tddTest
         public void WeatherMakerTestBarnaulNskSydney()
         {
             WeatherMaker wm = new WeatherMaker();
-            int temperatureBarnaul = wm.getCurTemperatureByCityID(1510853);
-            int temperatureNsk = wm.getCurTemperatureByCityID(1496747);
-            int temperatureSydney = wm.getCurTemperatureByCityID(2147714);
+            double temperatureBarnaul = wm.getCurTemperatureByCityID(1510853);
+            double temperatureNsk = wm.getCurTemperatureByCityID(1496747);
+            double temperatureSydney = wm.getCurTemperatureByCityID(2147714);
 
             Assert.IsTrue( (temperatureBarnaul == temperatureNsk) && (temperatureNsk == temperatureSydney) ? false : true);
         }
