@@ -7,8 +7,10 @@ namespace tddTest
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void SayHello()
         {
+            Companion companion = new Companion();
+            Assert.AreEqual(">>> Привет!", companion.getWords("Привет"));
         }
     }
 }
