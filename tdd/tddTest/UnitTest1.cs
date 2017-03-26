@@ -62,5 +62,12 @@ namespace tddTest
 
             Assert.IsTrue( (temperatureBarnaul == temperatureNsk) && (temperatureNsk == temperatureSydney) ? false : true);
         }
+
+        [TestMethod]
+        public void SayCurrentWeather()
+        {
+            Companion companion = new Companion();
+            Assert.IsTrue((companion.getWords("Покажи погоду")).Contains(">>> Сейчас на улице: "));
+        }
     }
 }
