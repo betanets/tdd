@@ -166,9 +166,16 @@ namespace tddTest
         {
             Companion companion = new Companion();
             WeatherMaker wm = new WeatherMaker();
-            double temperatureBarnaul = wm.getCurTemperatureByCityID(012);
             Assert.AreEqual(">>> Скажешь ID города?", companion.getWords("Покажи погоду по ID города"));
             Assert.AreEqual(">>> Упс! Кажется, города с таким ID не существует", companion.getWords("012"));
+        }
+
+        [TestMethod]
+        public void TestWeatherJSONParser()
+        {
+            Companion companion = new Companion();
+            WeatherMaker wm = new WeatherMaker();
+            Assert.AreEqual(-900, wm.getCurTemperatureByCityID(012));
         }
     }
 }
