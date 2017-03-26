@@ -23,7 +23,7 @@ namespace tdd
             }
             catch(Exception ex)
             {
-                return -500;
+                return -900;
             }
 
             var jmas = JObject.Parse(jsonString);

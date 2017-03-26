@@ -24,7 +24,7 @@ namespace tdd
             {
                 WeatherMaker wm = new WeatherMaker();
                 double temperature = wm.getCurTemperatureByCityID(Convert.ToInt32(words));
-                if (temperature == -500)
+                if (temperature == -900)
                     return replySymbols + "Упс! Кажется, города с таким ID не существует";
                 return replySymbols + "Сейчас на улице: " + temperature;
             }
