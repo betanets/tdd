@@ -23,7 +23,10 @@ namespace tdd
             if (result)
             {
                 WeatherMaker wm = new WeatherMaker();
-                return replySymbols + "Сейчас на улице: " + wm.getCurTemperatureByCityID(Convert.ToInt32(words));
+                double temperature = wm.getCurTemperatureByCityID(Convert.ToInt32(words));
+                if (temperature == -500)
+                    return "Упс! Кажется, города с таким ID не существует";
+                return replySymbols + "Сейчас на улице: " + temperature;
             }
             else
                 return replySymbols + "Кажется, что-то не так с ID города";

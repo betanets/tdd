@@ -12,7 +12,19 @@ namespace tdd
         {
             string replySymbols = ">>> ";
             if (words == "Что ты умеешь делать?")
-                return replySymbols + "Пока ничего";
+                return replySymbols + "Показывать погоду\n" + 
+                        replySymbols + "Показывать курсы валют";
+            if(words == "Команды")
+            {
+                return replySymbols + "Показать погоду в Барнауле: <Покажи погоду>\n" + 
+                    replySymbols + "Показать погоду в Новосибирске: <Покажи погоду в Новосибирске>\n" + 
+                    replySymbols + "Показать погоду в другом городе: <Покажи погоду по ID города> ==> <ID города>\n" + 
+                    replySymbols + "Показать курс доллара: <Покажи курс доллара>\n" + 
+                    replySymbols + "Показать курс евро: <Покажи курс евро>\n" + 
+                    replySymbols + "Завершить общение: <Пока>\n" + 
+                    replySymbols + "Показать общую информацию о боте: <Что ты умеешь делать?>\n" +
+                    replySymbols + "Показать эту справку: <Команды>";
+            }
             else if (words == "Пока")
                 return replySymbols + "Пока!";
             else if (words == "Покажи погоду")

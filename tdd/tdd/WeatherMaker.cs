@@ -15,9 +15,16 @@ namespace tdd
         {
             WebClient wc = new WebClient();
             wc.Encoding = System.Text.Encoding.UTF8;
-
-            string jsonString = wc.DownloadString("http://api.openweathermap.org/data/2.5/weather?id=" + ID
-                + "&appid=a234bbe9dd715c7fb108587e489bcc35");
+            string jsonString = "";
+            try
+            {
+                jsonString = wc.DownloadString("http://api.openweathermap.org/data/2.5/weather?id=" + ID
+                    + "&appid=a234bbe9dd715c7fb108587e489bcc35");
+            }
+            catch(Exception ex)
+            {
+                return -500;
+            }
 
             var jmas = JObject.Parse(jsonString);
             var temperatureString = jmas.First.Next.Next.Next.First.First.First.ToString();
