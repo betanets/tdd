@@ -135,5 +135,14 @@ namespace tddTest
             Companion companion = new Companion();
             Assert.IsTrue((companion.getWords("Покажи курс доллара")).Contains(">>> Курс доллара: "));
         }
+
+        [TestMethod]
+        public void IsCurrentExchRateCorrect()
+        {
+            Companion companion = new Companion();
+            ExchRateMaker erm = new ExchRateMaker();
+            double curErm = erm.getCurExchRate();
+            Assert.AreEqual(">>> Курс доллара: " + curErm, companion.getWords("Покажи курс доллара"));
+        }
     }
 }
