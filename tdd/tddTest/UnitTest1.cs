@@ -160,5 +160,15 @@ namespace tddTest
             double curErm = erm.getCurExchRateEUR();
             Assert.AreEqual(">>> Курс евро: " + curErm, companion.getWords("Покажи курс евро"));
         }
+
+        [TestMethod]
+        public void GetWeatherFromWrongCityID()
+        {
+            Companion companion = new Companion();
+            WeatherMaker wm = new WeatherMaker();
+            double temperatureBarnaul = wm.getCurTemperatureByCityID(012);
+            Assert.AreEqual(">>> Скажешь ID города?", companion.getWords("Покажи погоду по ID города"));
+            Assert.AreEqual(">>> Упс! Кажется, города с таким ID не существует", companion.getWords("012"));
+        }
     }
 }
