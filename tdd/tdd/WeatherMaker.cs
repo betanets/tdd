@@ -12,6 +12,8 @@ namespace tdd
         {
             if (ID == 6255152)
                 return -40;
+            else if (ID == 1880252)
+                return 30;
             return 0;
         }
     }
