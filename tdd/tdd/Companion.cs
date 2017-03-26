@@ -15,6 +15,8 @@ namespace tdd
                 return replySymbols + "Пока ничего";
             else if (words == "Пока")
                 return replySymbols + "Пока!";
+            else if (words == "Покажи погоду")
+                return replySymbols + "Сейчас на улице: ";
             return replySymbols + "Привет!";
         }
     }
