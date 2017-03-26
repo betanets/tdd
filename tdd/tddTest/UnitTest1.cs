@@ -43,5 +43,13 @@ namespace tddTest
             int temperature = wm.getCurTemperatureByCityID(6255152);
             Assert.IsTrue(temperature > -60 && temperature < -10 ? true : false);
         }
+
+        [TestMethod]
+        public void WeatherMakerTestSingapore()
+        {
+            WeatherMaker wm = new WeatherMaker();
+            int temperature = wm.getCurTemperatureByCityID(1880252);
+            Assert.IsTrue(temperature > 15 && temperature < 50 ? true : false);
+        }
     }
 }
