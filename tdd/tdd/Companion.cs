@@ -11,6 +11,8 @@ namespace tdd
         public string getWords(string words)
         {
             string replySymbols = ">>> ";
+            if (words == "Что ты умеешь делать?")
+                return replySymbols + "Пока ничего";
             return replySymbols + "Привет!";
         }
     }
