@@ -35,5 +35,13 @@ namespace tddTest
             int temperature = wm.getCurTemperatureByCityID(1510853);
             Assert.IsTrue(temperature > -40 && temperature < 40 ? true : false);
         }
+
+        [TestMethod]
+        public void WeatherMakerTestAntarctica()
+        {
+            WeatherMaker wm = new WeatherMaker();
+            int temperature = wm.getCurTemperatureByCityID(6255152);
+            Assert.IsTrue(temperature > -60 && temperature < -10 ? true : false);
+        }
     }
 }
