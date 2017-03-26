@@ -20,5 +20,12 @@ namespace tddTest
             Companion companion = new Companion();
             Assert.AreNotEqual(">>> Привет!", companion.getWords("Что ты умеешь делать?"));
         }
+
+        [TestMethod]
+        public void SayGoodbye()
+        {
+            Companion companion = new Companion();
+            Assert.AreEqual(">>> Пока!", companion.getWords("Пока"));
+        }
     }
 }
