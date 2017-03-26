@@ -13,6 +13,8 @@ namespace tdd
             string replySymbols = ">>> ";
             if (words == "Что ты умеешь делать?")
                 return replySymbols + "Пока ничего";
+            else if (words == "Пока")
+                return replySymbols + "Пока!";
             return replySymbols + "Привет!";
         }
     }
