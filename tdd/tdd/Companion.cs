@@ -16,7 +16,10 @@ namespace tdd
             else if (words == "Пока")
                 return replySymbols + "Пока!";
             else if (words == "Покажи погоду")
-                return replySymbols + "Сейчас на улице: ";
+            {
+                WeatherMaker wm = new WeatherMaker();
+                return replySymbols + "Сейчас на улице: " + wm.getCurTemperatureByCityID(1510853);
+            }
             return replySymbols + "Привет!";
         }
     }
