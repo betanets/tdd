@@ -69,5 +69,14 @@ namespace tddTest
             Companion companion = new Companion();
             Assert.IsTrue((companion.getWords("Покажи погоду")).Contains(">>> Сейчас на улице: "));
         }
+
+        [TestMethod]
+        public void IsCurrentWeatherCorrect()
+        {
+            Companion companion = new Companion();
+            WeatherMaker wm = new WeatherMaker();
+            double temperatureBarnaul = wm.getCurTemperatureByCityID(1510853);
+            Assert.AreEqual(">>> Сейчас на улице: " + temperatureBarnaul, companion.getWords("Покажи погоду"));
+        }
     }
 }
