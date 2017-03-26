@@ -29,7 +29,7 @@ namespace tdd
             var jmas = JObject.Parse(jsonString);
             var temperatureString = jmas.First.Next.Next.Next.First.First.First.ToString();
 
-            return Double.Parse(temperatureString) - 273.15; //Кельвин --> Цельсий
+            return Math.Round(Double.Parse(temperatureString) - 273.15, 1); //Кельвин --> Цельсий
         }
 
 

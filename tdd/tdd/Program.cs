@@ -11,6 +11,8 @@ namespace tdd
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("-----------============Консольный друг============-----------");
+            Console.WriteLine(">>> Напиши мне что-нибудь!");
             Companion companion = new Companion();
             string words;
             do
@@ -19,7 +21,7 @@ namespace tdd
                 Console.WriteLine(companion.getWords(words));
             } while (words != "Пока");
 
-            for (int i = 5; i > 0; i--)
+            for (int i = 3; i > 0; i--)
             {
                 Console.WriteLine("[!!!!!!] До завершения работы " + i);
                 Thread.Sleep(1000);
