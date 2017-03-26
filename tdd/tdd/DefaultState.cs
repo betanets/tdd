@@ -6,30 +6,12 @@ using System.Threading.Tasks;
 
 namespace tdd
 {
-    public class Companion
+    public class DefaultState : ICompanionState
     {
-        public ICompanionState State { get; set; }
-
-        public Companion(ICompanionState cstate)
-        {
-            State = cstate;
-        }
-
-        public Companion()
-        {
-            State = new DefaultState();
-        }
-
-        public string getWords(string words)
-        {
-            return State.getWords(this, words);
-        }
-
-        /*
-        public string getWords(string words)
+        public string getWords(Companion companion, string words)
         {
             string replySymbols = ">>> ";
-            int i = -1;
+            //int i = -1;
             if (words == "Что ты умеешь делать?")
                 return replySymbols + "Пока ничего";
             else if (words == "Пока")
@@ -46,15 +28,17 @@ namespace tdd
             }
             else if (words == "Покажи погоду по ID города")
             {
+                companion.State = new WeatherIDState();
                 return replySymbols + "Скажешь ID города?";
             }
+            /*
             else if (Int32.TryParse(words, out i) && i != -1)
             {
                 WeatherMaker wm = new WeatherMaker();
                 return replySymbols + "Сейчас на улице: " + wm.getCurTemperatureByCityID(Convert.ToInt32(words));
             }
+            */
             return replySymbols + "Привет!";
         }
-        */
     }
 }

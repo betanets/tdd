@@ -46,8 +46,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Companion.cs" />
+    <Compile Include="DefaultState.cs" />
+    <Compile Include="ICompanionState.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeatherIDState.cs" />
     <Compile Include="WeatherMaker.cs" />
   </ItemGroup>
   <ItemGroup>
