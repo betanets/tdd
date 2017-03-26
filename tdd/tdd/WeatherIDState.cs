@@ -13,6 +13,12 @@ namespace tdd
             string replySymbols = ">>> ";
             int num;
 
+            if(words == "Спасибо")
+            {
+                companion.State = new DefaultState();
+                return replySymbols + "Пожалуйста!";
+            }
+
             bool result = Int32.TryParse(words, out num);
             if (result)
             {

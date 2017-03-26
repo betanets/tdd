@@ -11,7 +11,6 @@ namespace tdd
         public string getWords(Companion companion, string words)
         {
             string replySymbols = ">>> ";
-            //int i = -1;
             if (words == "Что ты умеешь делать?")
                 return replySymbols + "Пока ничего";
             else if (words == "Пока")
@@ -31,13 +30,6 @@ namespace tdd
                 companion.State = new WeatherIDState();
                 return replySymbols + "Скажешь ID города?";
             }
-            /*
-            else if (Int32.TryParse(words, out i) && i != -1)
-            {
-                WeatherMaker wm = new WeatherMaker();
-                return replySymbols + "Сейчас на улице: " + wm.getCurTemperatureByCityID(Convert.ToInt32(words));
-            }
-            */
             return replySymbols + "Привет!";
         }
     }
