@@ -27,5 +27,13 @@ namespace tddTest
             Companion companion = new Companion();
             Assert.AreEqual(">>> Пока!", companion.getWords("Пока"));
         }
+
+        [TestMethod]
+        public void WeatherMakerTest()
+        {
+            WeatherMaker wm = new WeatherMaker();
+            int temperature = wm.getCurTemperatureByCityID(1510853);
+            Assert.IsTrue(temperature > -40 && temperature < 40 ? true : false);
+        }
     }
 }
