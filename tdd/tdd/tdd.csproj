@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Companion.cs" />
     <Compile Include="DefaultState.cs" />
+    <Compile Include="ExchRateMaker.cs" />
     <Compile Include="ICompanionState.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

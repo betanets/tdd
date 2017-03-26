@@ -32,7 +32,8 @@ namespace tdd
             }
             else if(words == "Покажи курс доллара")
             {
-                return replySymbols + "Курс доллара: ";
+                ExchRateMaker erm = new ExchRateMaker();
+                return replySymbols + "Курс доллара: " + erm.getCurExchRate();
             }
             return replySymbols + "Привет!";
         }
