@@ -88,5 +88,18 @@ namespace tddTest
             double temperatureNsk = wm.getCurTemperatureByCityID(1496747);
             Assert.AreEqual(">>> Сейчас на улице: " + temperatureNsk, companion.getWords("Покажи погоду в Новосибирске"));
         }
+
+        [TestMethod]
+        public void SayCurrentWeatherInRandomCity()
+        {
+            Companion companion = new Companion();
+            WeatherMaker wm = new WeatherMaker();
+            Random rnd = new Random();
+            int cityID = rnd.Next(6553137, 6553171);
+
+            double temperatureRnd = wm.getCurTemperatureByCityID(cityID);
+            Assert.AreEqual(">>> Скажешь ID города?", companion.getWords("Покажи погоду по ID города"));
+            Assert.AreEqual(">>> Сейчас на улице: " + temperatureRnd, companion.getWords(cityID.ToString()));
+        }
     }
 }
